@@ -5,8 +5,11 @@
     [class.selected]="recipe === selectedRecipe"
     (click)="onSelect(recipe)"
   >
-    <span class="badge">{{recipe.id}}</span>
+    <a routerLink="/recipe/{{recipe.id}}">
+      <span class="badge">{{recipe.id}}</span> {{recipe.cuisine}}
+    </a>
+    <!--<span class="badge">{{recipe.id}}</span>{{recipe.cuisine}}-->
   </li> 
 </ul>
 
-<app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>
+<!--<app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>-->
