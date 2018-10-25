@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { RecipeService } from '../recipe.service';
 
-import { RECIPES } from './recipes-mock';
+// import { RECIPES } from './recipes-mock';
 import { Recipe } from '../models/recipe';
 
 @Component({

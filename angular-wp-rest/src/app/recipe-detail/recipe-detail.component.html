@@ -1,13 +1,26 @@
 <div *ngIf="recipe">
 
-  <h2>{{recipe.id}} Details</h2>
-  <div><span>id: </span>{{recipe.id}}</div>
+  <button (click)="goBack()">go back</button>
+  <h2>{{recipe.title.rendered}}</h2>
+  <p>{{recipe.acf.subtitle}}</p>
+  <div><em>id: </em>{{recipe.id}}</div>
+  <p>{{recipe.acf.intro}}</p>
+  <strong>Ingredients:</strong>{{recipe.acf.ingredients}}
+  <strong>Alcohol:</strong> {{recipe.acf.alcohol}}
   <div>
-    <label>name:
-      <input [(ngModel)]="recipe.name" placeholder="name"/>
+    <img src="{{recipe.acf.afbeelding_1}}" alt="afbeelding_1">
+    <img src="{{recipe.acf.afbeelding_2}}" alt="afbeelding_2">
+  </div>
+
+  <hr>
+  <div>
+    <label>title:
+      <input [(ngModel)]="recipe.title.rendered" placeholder="title"/>
     </label>
   </div>
 
-  <button (click)="goBack()">go back</button>
+</div>
 
+<div *ngIf="!recipe">
+  loading...
 </div>
